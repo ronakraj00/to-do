@@ -1,1 +1,22 @@
-console.log("it is running");
+import { createToDo,createProject,addToProject, setToDoComplete, changePriority, viewProject } from "./userFn";
+import { populateInitialPage } from "./initialPage";
+const todo1=createToDo("todo1","new","43","2");
+const todo2=createToDo("todo2","new","43","1");
+const project1=createProject("project1");
+
+addToProject(project1,todo1,todo2)
+console.log(project1)
+
+const dProject1=createProject();
+
+addToProject(dProject1,todo2)
+
+console.log(dProject1)
+
+setToDoComplete(project1,todo1)
+
+changePriority(todo2,5);
+
+console.log(viewProject(project1));
+
+populateInitialPage()

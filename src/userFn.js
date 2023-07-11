@@ -1,6 +1,6 @@
 import { toDo } from "./classToDo";
 import { userProject, defaultProject } from "./classProject";
-
+import { defaultProject1 } from ".";
 export function createToDo(title,description,dueDate,priority){
     const todo = new toDo(title,description,dueDate,priority);
     return todo;
@@ -27,5 +27,7 @@ export function changePriority(todo,newPriority){
 }
 
 export function viewProject(project){
-    return project.array[0][0];
+    console.log("project array",project.array[0])
+    return project.array[0];
+
 }
